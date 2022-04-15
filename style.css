@@ -35,18 +35,57 @@ header {
   border-bottom: var(--secondary-color) 6px solid;
 }
 
-/* header link animations! */
+/*===================================
+
+   header link transitions 
+
+===================================*/
+
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
+  padding: 10px;
+  background-color: transparent;
 }
-/* end header link animations */
 
-/* article link transitions */
-main a {
-  color: var(--danger-color);
+header a:hover {
+  color: var(--secondary-color);
+  background-color: var(--off-white);
+  padding: 10px;
+  margin: 0;
+  border-radius: 5px;
 }
-/* end article link transitions */
+
+/*===================================
+
+ end header link transitions
+
+===================================*/
+
+
+/*===================================
+
+    article link transitions
+
+===================================*/
+
+main a {
+  color:#F78828;
+  padding: 3px;
+  background-color: transparent;
+}
+
+main a:hover {
+  background-color: #074c50;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+/*===================================
+
+ end article link transitions
+
+===================================*/
 
 main > article, nav{
   max-width: 1200px;
@@ -100,7 +139,26 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  animation: hover 3s infinite alternate linear
 }
+
+/*===================================
+
+    hero button animations
+
+===================================*/
+
+@keyframes hover {
+  to {
+    transform: translateY(-10px) scale(140%);
+  }
+}
+
+/*===================================
+
+ end hero button transitions
+
+===================================*/
 
 main article {
   padding: 48px 96px;
